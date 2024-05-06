@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.cydeo</groupId>
-    <artifactId>lab-orm-queries</artifactId>
+    <artifactId>lab-09-queries</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>lab-orm-queries</name>
-    <description>lab-orm-queries</description>
+    <name>lab-09-queries</name>
+    <description>lab-09-queries</description>
     <properties>
         <java.version>17</java.version>
     </properties>
