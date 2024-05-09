@@ -19,5 +19,5 @@ public interface CartItemRepository extends JpaRepository<CartItem, Long> {
     //Write a native query to get cart items for specific cart state and without discount
     @Query(value = "SELECT ci.quantity, ci.cart_id, ci.product_id, ci.id FROM cart_item ci join cart c on ci.cart_id = c.id where c.discount_id is null ",nativeQuery = true)
     List<CartItem> getCartByCartStateDiscountIsNull();
-    //hi
+    //hiiiii
 }
