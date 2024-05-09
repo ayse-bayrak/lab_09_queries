@@ -1,6 +1,9 @@
 package com.cydeo.repository;
 
-public interface OrderRepository {
+import com.cydeo.entity.Order;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface OrderRepository extends JpaRepository<Order, Long> {
 
     //Write a derived query to get top 5 orders which are ordered by total price desc
 

@@ -1,5 +1,6 @@
 package com.cydeo;
 
+import com.cydeo.enums.CartState;
 import com.cydeo.repository.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -38,6 +39,12 @@ public class QueryTest implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        System.out.println("====================getCartItemByCartStateAndProductName================");
+        System.out.println(cartItemRepository.getCartItemByCartStateAndProductName("CREATED", "Tomatoes").get(0).getQuantity());//2
+        System.out.println(cartItemRepository.getCartByCartStateDiscountIsNull().get(0).getQuantity());//3
+        //System.out.println(cartItemRepository.findByCart_CartState("CREATED"));
+        System.out.println(cartItemRepository.countBy());//1998
+        System.out.println(addressRepository.getAllByIdIs(1L).get(0).getName());//Office
 
     }
 }

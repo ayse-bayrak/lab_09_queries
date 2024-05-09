@@ -1,6 +1,9 @@
 package com.cydeo.repository;
 
-public interface ProductRepository {
+import com.cydeo.entity.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProductRepository extends JpaRepository<Product, Long> {
 
     //Write a derived query to get product by specific name
 

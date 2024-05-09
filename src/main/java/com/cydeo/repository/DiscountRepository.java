@@ -1,6 +1,9 @@
 package com.cydeo.repository;
 
-public interface DiscountRepository {
+import com.cydeo.entity.Discount;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface DiscountRepository extends JpaRepository<Discount, Long> {
 
     //Write a derived query to get all discounts greater than discount amount
 
