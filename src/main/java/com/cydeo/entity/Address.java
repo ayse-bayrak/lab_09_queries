@@ -18,4 +18,21 @@ public class Address extends BaseEntity{
 
     @ManyToOne
     private Customer customer;
+
+    public Address(String name, String street, String zipCode, Customer customer) {
+        this.name = name;
+        this.street = street;
+        this.zipCode = zipCode;
+        this.customer = customer;
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "name='" + name + '\'' +
+                ", street='" + street + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                ", customer=" + customer +
+                '}';
+    }
 }

@@ -14,7 +14,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-@Data
+
 public class Cart extends BaseEntity{
 
     @Enumerated(EnumType.STRING)
@@ -26,5 +26,12 @@ public class Cart extends BaseEntity{
     @ManyToOne
     private Customer customer;
 
-    //hiii
+    @Override
+    public String toString() {
+        return "Cart{" +
+                "cartState=" + cartState +
+                ", discount=" + discount +
+                ", customer=" + customer +
+                '}';
+    }
 }
