@@ -59,14 +59,17 @@ public class QueryTest implements CommandLineRunner {
         System.out.println(cartItemRepository.getCartByCartStateDiscountIsNull().get(0).getQuantity());//3
         System.out.println(cartItemRepository.findByCart_CartState(CartState.CREATED).toString());
         System.out.println(cartItemRepository.countBy());//1998
+
         System.out.println("====================CartRepository================");
         System.out.println(cartRepository.findByDiscount_DiscountType(DiscountType.RATE_BASED));
-       System.out.println(cartRepository.findAllByCustomerId(1L));
+        System.out.println(cartRepository.findAllByCustomerId(1L));
+
         System.out.println("====================CategoryRepository================");
         System.out.println(categoryRepository.findByName("Termite Control"));
         //[Category{name='Termite Control', id=1}, Category{name='Termite Control', id=31}] why does not unique id? both name are the same
         System.out.println(categoryRepository.findTop3ByOrderByNameDesc());
-          System.out.println("====================CustomerRepository================");
+
+        System.out.println("====================CustomerRepository================");
         System.out.println(customerRepository.findByEmail("asturton0@list-manage.com"));
         System.out.println(customerRepository.findByUserName("asturton0"));
 
@@ -79,6 +82,7 @@ public class QueryTest implements CommandLineRunner {
         System.out.println(orderRepository.findTop5ByOrderByTotalPriceDesc());
         System.out.println(orderRepository.existsByCustomerEmail("asturton0@list-manage.com"));
         System.out.println(orderRepository.getAllEqualTotalAndPaidPrice());//[] there is not equal value
+
         System.out.println("====================PaymentRepository================");
         System.out.println(paymentRepository.totalSumPaidPrice());
         System.out.println(paymentRepository.averagePaidAmount());
